@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise de Conteúdo</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--taupe); border-radius: 3px; }
+  select { appearance: auto; }
+  button { font-family: var(--font); }
+  @keyframes om-spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Libraries (local) -->
+  <script src="lib/react.min.js"></script>
+  <script src="lib/react-dom.min.js"></script>
+  <script src="lib/chart.min.js"></script>
+  <script src="image-slot.js"></script>
+
+  <!-- App -->
+  <script src="dashboard-data.js"></script>
+  <script src="dashboard-media.js"></script>
+  <script src="dashboard-audience.js"></script>
+  <script src="dashboard-refresh.js"></script>
+  <script src="dashboard-ui.js"></script>
+  <script src="dashboard-page-conta.js"></script>
+  <script src="dashboard-page-conteudos.js"></script>
+  <script src="dashboard-page-insights.js"></script>
+  <script src="dashboard-app.js"></script>
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+</style>

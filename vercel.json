@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/Dashboard.html" }
+  ],
+  "functions": {
+    "api/refresh.js": {
+      "maxDuration": 60
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/refresh",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}

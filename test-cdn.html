@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>CDN Test</title></head>
+<body>
+<div id="out"></div>
+<script>
+function log(msg) {
+  console.log(msg);
+  document.getElementById('out').innerHTML += msg + '<br>';
+}
+log('start');
+</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous" onload="log('react ok')" onerror="log('react FAIL')"></script>
+<script>log('after react tag');</script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous" onload="log('react-dom ok')" onerror="log('react-dom FAIL')"></script>
+<script>log('after react-dom tag');</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" crossorigin="anonymous" onload="log('chartjs ok')" onerror="log('chartjs FAIL')"></script>
+<script>log('after chartjs tag');</script>
+<script src="dashboard-data.js" onload="log('data ok')" onerror="log('data FAIL')"></script>
+<script>log('after data tag');</script>
+<script>log('ALL DONE. React='+(typeof React)+', Chart='+(typeof Chart));</script>
+</body>
+</html>

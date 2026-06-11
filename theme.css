@@ -1,0 +1,67 @@
+/* ============================================================
+   Nathalia Hering — Análise de Conteúdo
+   Custom theme: McKenzie Headline (title) + Meltmino (body)
+   ============================================================ */
+
+@font-face {
+  font-family: "McKenzieHeadline";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/McKenzieHeadline-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Meltmino";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("fonts/Meltmino-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Meltmino";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Meltmino-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Meltmino";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Meltmino-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Meltmino";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Meltmino-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Meltmino";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Meltmino-SemiBold.otf") format("opentype");
+}
+
+:root {
+  /* Palette — Nathalia Hering */
+  --bg:        #FFF2E8; /* background — peach cream */
+  --surface:   #F8E3D2; /* KPI / button bg — soft apricot */
+  --ink:       #5F4133; /* text — warm brown */
+  --ink-soft:  #5F4133;
+  --muted:     #8A6C5C; /* slightly lighter text */
+  --line:      #EBD4C0; /* dividers */
+
+  /* Page accents */
+  --accent-conta:     #B57353; /* terracotta */
+  --accent-conteudos: #376447; /* forest green */
+  --accent-insights:  #A3A983; /* sage olive */
+  --accent:           var(--accent-conta);
+
+  --font:       "Meltmino", system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-title: "McKenzieHeadline", "Meltmino", serif;
+}
