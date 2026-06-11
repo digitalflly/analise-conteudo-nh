@@ -9,7 +9,7 @@ código.
 
 | Camada | Arquivo | Papel |
 | --- | --- | --- |
-| Front-end | `Dashboard.html` + `dashboard-*.js` | App em React (via CDN local em `lib/`). Renderiza KPIs, gráficos e tabelas. |
+| Front-end | `index.html` + `dashboard-*.js` | App em React (via CDN local em `lib/`). Renderiza KPIs, gráficos e tabelas. É a página inicial servida em `/`. |
 | Dados (offline) | `dashboard-data.js` | Contém um *seed* embutido (último sync) e o construtor `buildDashboardData()`. O app abre instantâneo, mesmo sem internet. |
 | Atualização | `dashboard-refresh.js` | Ao clicar em **Atualizar**, busca `/api/refresh`, reconstrói o modelo e re-renderiza. |
 | Back-end | `api/refresh.js` | Função serverless do Vercel. Chama a Windsor.ai com a sua chave (guardada no servidor) e normaliza os dados. |
@@ -94,9 +94,14 @@ cp .env.example .env   # preencha WINDSOR_API_KEY
 vercel dev             # serve o site + a função /api/refresh em localhost
 ```
 
-Abrir o `Dashboard.html` direto no navegador (sem `vercel dev`) também funciona,
+Abrir o `index.html` direto no navegador (sem `vercel dev`) também funciona,
 mas o botão **Atualizar** só recarrega o seed — a função `/api/refresh` precisa
 do ambiente do Vercel.
+
+> Há também um arquivo **`Análise de Conteúdo (offline).html`**: uma versão
+> standalone, autocontida (um único arquivo, sem dependências), para enviar por
+> e-mail ou abrir offline. Ela mostra o último *seed* embutido e **não** tem o
+> botão Atualizar ao vivo.
 
 ## Atualizar o *seed* embutido (opcional)
 
