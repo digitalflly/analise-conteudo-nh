@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/Dashboard.html" }
+    { "source": "/", "destination": "/index.html" }
   ],
   "functions": {
     "api/refresh.js": {
