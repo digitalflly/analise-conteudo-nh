@@ -351,7 +351,8 @@
     ['2026-06-07',42165,21677,306,0,27,167,6,75],
     ['2026-06-08',58469,24960,514,2,81,254,2,87],
     ['2026-06-09',58555,25109,444,0,49,241,7,90],
-    ['2026-06-10',51891,24277,373,0,41,216,5,57],
+    ['2026-06-10',55760,26224,408,0,44,237,6,62],
+    ['2026-06-11',14633,7738,67,0,5,41,1,14],
   ];
   var DAILY_KEYS = ['date','views','reach','interactions','taps','shares','likes','comments','saves'];
   var dailySeed = DAILY_RAW.map(function (r) { var o = {}; DAILY_KEYS.forEach(function (k, i) { o[k] = r[i]; }); return o; });
@@ -517,16 +518,17 @@
     ['2026-06-07',103],
     ['2026-06-08',195],
     ['2026-06-09',124],
-    ['2026-06-10',0],
+    ['2026-06-10',136],
+    ['2026-06-11',0],
   ];
   var followsSeed = FOLLOWER_DAILY.map(function (r) { return { date: r[0], net: r[1] }; });
 
   var POST_COUNTS_SEED = {2:3,3:1,4:1,5:9,6:3,7:4,8:2,11:1,12:1,13:3,14:2,15:4,16:2,17:3,18:7,19:3,20:3,21:4,22:4,23:3,24:2};
 
   window.DASHBOARD_SEED = {
-    profile: { name: 'Nathalia Heringer', handle: '@nathalia.heringer', initial: 'NH', followers: 104013 },
+    profile: { name: 'Nathalia Heringer', handle: '@nathalia.heringer', initial: 'NH', followers: 104034 },
     daily: dailySeed, follows: followsSeed, postCounts: POST_COUNTS_SEED,
-    lastSync: '2026-06-10',
+    lastSync: '2026-06-11',
   };
 
   window.DASHBOARD_DATA = window.buildDashboardData(window.DASHBOARD_SEED);

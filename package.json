@@ -1,13 +1,9 @@
 {
-  "name": "analise-de-conteudo",
+  "name": "analise-conteudo-nathalia",
   "version": "1.0.0",
   "private": true,
-  "description": "Dashboard de análise de conteúdo do Instagram (Windsor.ai) — Nathalia Heringer",
+  "description": "Dashboard de análise de conteúdo do Instagram (Windsor.ai) — site estático + função serverless no Vercel.",
   "engines": {
-    "node": ">=18"
-  },
-  "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
+    "node": "20.x"
   }
 }
